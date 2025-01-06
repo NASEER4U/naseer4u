@@ -1,0 +1,81 @@
+web: python backend_setup.py
+from flask import Flask, request, jsonify, render_template
+from flask_sqlalchemy import SQLAlchemy
+from werkzeug.utils import secure_filename
+import os
+
+app = Flask(__name__)
+
+# Configuration
+UPLOAD_FOLDER = 'uploads'
+ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///content.db'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
+db = SQLAlchemy(app)
+
+if not os.path.exists(UPLOAD_FOLDER):
+    os.makedirs(UPLOAD_FOLDER)
+
+# Database Model
+class Content(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.String(100), nullable=False)
+    body = db.Column(db.Text, nullable=False)
+    image_path = db.Column(db.String(200), nullable=False)
+
+# Helper function to check allowed file extensions
+def allowed_file(filename):
+    return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+
+# Routes
+@app.route('/')
+def index():
+    contents = Content.query.all()
+    return render_template('index.html', contents=contents)  # Reference your HTML file here
+
+@app.route('/upload', methods=['POST'])
+def upload_content():
+    if 'image' not in request.files:
+        return jsonify({'error': 'No image file uploaded'}), 400
+
+    image = request.files['image']
+    if image.filename == '':
+        return jsonify({'error': 'No selected file'}), 400
+
+    if image and allowed_file(image.filename):
+        filename = secure_filename(image.filename)
+        image_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+        image.save(image_path)
+
+        title = request.form.get('title', 'Untitled')
+        body = request.form.get('body', 'No content')
+
+        # Save to database
+        new_content = Content(title=title, body=body, image_path=image_path)
+        db.session.add(new_content)
+        db.session.commit()
+
+        return jsonify({'message': 'Content uploaded successfully', 'filename': filename}), 200
+    else:
+        return jsonify({'error': 'Invalid file type'}), 400
+
+@app.route('/uploads/<filename>')
+def uploaded_file(filename):
+    return jsonify({'message': f"Access file at {os.path.join(UPLOAD_FOLDER, filename)}"})
+
+@app.route('/delete/<int:id>', methods=['DELETE'])
+def delete_content(id):
+    content = Content.query.get_or_404(id)
+    try:
+        os.remove(content.image_path)  # Remove the associated image file
+    except FileNotFoundError:
+        pass
+    db.session.delete(content)
+    db.session.commit()
+    return jsonify({'message': 'Content deleted successfully'}), 200
+
+if __name__ == '__main__':
+    db.create_all()  # Create database tables
+    app.run(debug=True)

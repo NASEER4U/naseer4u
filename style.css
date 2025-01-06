@@ -1,0 +1,854 @@
+/* General Reset */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+}
+
+main {
+    padding: 2em;
+    max-width: 1200px;
+    margin: auto;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#gallery {
+    margin-bottom: 2em;
+}
+
+.images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.image-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 1em;
+    text-align: center;
+    width: calc(33.333% - 1em);
+    box-sizing: border-box;
+}
+
+.image-card img {
+    max-width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 0.5em;
+}
+
+#articles article {
+    margin-bottom: 2em;
+}
+
+#articles h3 {
+    color: #333;
+    margin-bottom: 0.5em;
+}
+
+footer {
+    text-align: center;
+    padding: 1em 0;
+    background: #333;
+    color: #fff;
+    margin-top: 2em;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #ffcccb;
+    text-align: center;
+    padding: 20px;
+    font-size: 2em;
+    color: #4b0082;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slides img {
+    width: 100%;
+    height: auto;
+    display: none;
+}
+
+.admin-section {
+    margin: 20px;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.admin-section textarea {
+    width: 100%;
+    height: 200px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.admin-section button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.admin-section button:hover {
+    background-color: #45a049;
+}
+
+.image-gallery {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.image-gallery img {
+    width: 30%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+footer {
+    background-color: #ffcccb;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.9em;
+}
+
+.flower-decoration {
+    background-image: url('flower-pattern.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50px;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    margin: 0;
+    padding: 0;
+}
+
+.book-container {
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    height: 100vh;
+}
+
+.book-slide {
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: absolute;
+    transition: transform 1s ease-in-out;
+}
+
+.book-slide h2 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #4b0082;
+}
+
+.book-slide p {
+    text-align: center;
+    font-size: 1.2em;
+    padding: 20px;
+}
+
+/* Theme 1 - Flower Theme */
+.slide-1 {
+    background-color: #ffe4e1;
+    background-image: url('flower-pattern.jpg');
+    background-size: cover;
+    color: #4b0082;
+}
+
+/* Theme 2 - Hamlet Theme */
+.slide-2 {
+    background-color: #2e3b4e;
+    color: white;
+    padding: 40px;
+    font-family: 'Times New Roman', serif;
+}
+
+/* Theme 3 - Modern Literature */
+.slide-3 {
+    background-color: #f0f8ff;
+    color: #2f4f4f;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Theme 4 - Poetry Theme */
+.slide-4 {
+    background-color: #faf0e6;
+    color: #8b0000;
+    font-style: italic;
+}
+
+/* Theme 5 - Classic Literature */
+.slide-5 {
+    background-color: #f5f5dc;
+    color: #000080;
+}
+
+/* Navigation Buttons */
+.navigation-buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    margin: 0;
+    padding: 0;
+}
+
+.book-container {
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    height: 100vh;
+}
+
+.book-slide {
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: absolute;
+    transition: transform 1s ease-in-out;
+}
+
+.book-slide h2 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #4b0082;
+}
+
+.book-slide p {
+    text-align: center;
+    font-size: 1.2em;
+    padding: 20px;
+}
+
+/* Theme 1 - Flower Theme */
+.slide-1 {
+    background-color: #ffe4e1;
+    background-image: url('flower-pattern.jpg'); /* Make sure you have this image or replace with another */
+    background-size: cover;
+    color: #4b0082;
+}
+
+/* Theme 2 - Hamlet Theme */
+.slide-2 {
+    background-color: #2e3b4e;
+    color: white;
+    padding: 40px;
+    font-family: 'Times New Roman', serif;
+}
+
+/* Theme 3 - Modern Literature */
+.slide-3 {
+    background-color: #f0f8ff;
+    color: #2f4f4f;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Theme 4 - Poetry Theme */
+.slide-4 {
+    background-color: #faf0e6;
+    color: #8b0000;
+    font-style: italic;
+}
+
+/* Theme 5 - Classic Literature */
+.slide-5 {
+    background-color: #f5f5dc;
+    color: #000080;
+}
+
+/* Navigation Buttons */
+.navigation-buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    margin: 0;
+    padding: 0;
+}
+
+.book-container {
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    height: 100vh;
+    perspective: 1500px; /* Add perspective to enhance 3D effect */
+}
+
+.book-slide {
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: absolute;
+    transition: transform 1s ease-in-out;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    animation: flip 1s forwards;
+}
+
+/* Page-flip animation */
+@keyframes flip {
+    0% {
+        transform: rotateY(0deg);
+    }
+    50% {
+        transform: rotateY(90deg);
+    }
+    100% {
+        transform: rotateY(180deg);
+    }
+}
+
+.book-slide h2 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #4b0082;
+}
+
+.book-slide p {
+    text-align: center;
+    font-size: 1.2em;
+    padding: 20px;
+}
+
+/* Theme 1 - Flower Theme */
+.slide-1 {
+    background-color: #ffe4e1;
+    background-image: url('flower-pattern.jpg'); /* Replace with actual image */
+    background-size: cover;
+    color: #4b0082;
+}
+
+/* Theme 2 - Hamlet Theme */
+.slide-2 {
+    background-color: #2e3b4e;
+    color: white;
+    padding: 40px;
+    font-family: 'Times New Roman', serif;
+}
+
+/* Theme 3 - Modern Literature */
+.slide-3 {
+    background-color: #f0f8ff;
+    color: #2f4f4f;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Theme 4 - Poetry Theme */
+.slide-4 {
+    background-color: #faf0e6;
+    color: #8b0000;
+    font-style: italic;
+}
+
+/* Theme 5 - Classic Literature */
+.slide-5 {
+    background-color: #f5f5dc;
+    color: #000080;
+}
+
+/* Navigation Buttons */
+.navigation-buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+}
+
+/* Action buttons (additional interactive elements) */
+.action-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.action-btn:hover {
+    background-color: #ff4500;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    margin: 0;
+    padding: 0;
+}
+
+.book-container {
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    height: 100vh;
+    perspective: 1500px; /* Add perspective to enhance 3D effect */
+}
+
+.book-slide {
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: absolute;
+    transition: transform 1s ease-in-out;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    animation: flip 1s forwards;
+}
+
+/* Page-flip animation */
+@keyframes flip {
+    0% {
+        transform: rotateY(0deg);
+    }
+    50% {
+        transform: rotateY(90deg);
+    }
+    100% {
+        transform: rotateY(180deg);
+    }
+}
+
+.book-slide h2 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #4b0082;
+}
+
+.book-slide p {
+    text-align: center;
+    font-size: 1.2em;
+    padding: 20px;
+}
+
+/* Theme 1 - Flower Theme */
+.slide-1 {
+    background-color: #ffe4e1;
+    background-image: url('flower-pattern.jpg'); /* Replace with actual image */
+    background-size: cover;
+    color: #4b0082;
+}
+
+/* Theme 2 - Hamlet Theme */
+.slide-2 {
+    background-color: #2e3b4e;
+    color: white;
+    padding: 40px;
+    font-family: 'Times New Roman', serif;
+}
+
+/* Theme 3 - Modern Literature */
+.slide-3 {
+    background-color: #f0f8ff;
+    color: #2f4f4f;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Theme 4 - Poetry Theme */
+.slide-4 {
+    background-color: #faf0e6;
+    color: #8b0000;
+    font-style: italic;
+}
+
+/* Theme 5 - Classic Literature */
+.slide-5 {
+    background-color: #f5f5dc;
+    color: #000080;
+}
+
+/* Navigation Buttons */
+.navigation-buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+}
+
+/* Action buttons (additional interactive elements) */
+.action-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.action-btn:hover {
+    background-color: #ff4500;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .book-container {
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .book-slide h2 {
+        font-size: 2em;
+    }
+
+    .book-slide p {
+        font-size: 1em;
+        padding: 10px;
+    }
+
+    button {
+        font-size: 1em;
+        padding: 8px 16px;
+    }
+
+    .action-btn {
+        font-size: 0.9em;
+        padding: 8px 16px;
+    }
+
+    .navigation-buttons button {
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .book-slide h2 {
+        font-size: 1.5em;
+    }
+
+    .book-slide p {
+        font-size: 0.9em;
+        padding: 5px;
+    }
+
+    button {
+        font-size: 1em;
+        padding: 6px 12px;
+    }
+
+    .action-btn {
+        font-size: 0.8em;
+        padding: 6px 12px;
+    }
+}
+html {
+    scroll-behavior: smooth;
+}
+/* Action buttons hover effect */
+.action-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.action-btn:hover {
+    background-color: #ff4500;
+    transform: scale(1.1); /* Slightly enlarge the button on hover */
+}
+
+/* Hover effect for navigation buttons */
+button {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: scale(1.1); /* Slightly enlarge the button on hover */
+}
+.slide-1 {
+    background-color: #ffe4e1;
+    background-image: url('new-flower-image.jpg'); /* Use a new flower image */
+    background-size: cover;
+    color: #4b0082; /* Dark purple text */
+}
+.slide-2 {
+    background-color: #2e3b4e;
+    color: white;
+    padding: 40px;
+    font-family: 'Georgia', serif; /* Use a more classical font for Hamlet */
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #4caf50;
+    color: white;
+}
+
+section {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: #4caf50;
+}
+
+.gallery-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.gallery-container img {
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+    border: 2px solid #4caf50;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #444;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+}
+
+form input, form textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4caf50;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
+.hidden {
+    display: none;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+  }
+  .header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  .content {
+    padding: 20px;
+  }
+  .article {
+    margin-bottom: 30px;
+  }
+  .article h3 {
+    color: #4CAF50;
+  }
+  .download {
+    margin: 10px 0;
+    display: inline-block;
+    padding: 10px 15px;
+    color: white;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  .footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #ddd;
+    margin-top: 20px;
+  }
+  .login-section {
+    margin-top: 30px;
+    text-align: center;
+  }
+  .btn {
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #4285f4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
